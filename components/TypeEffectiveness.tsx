@@ -12,8 +12,8 @@ const sortEffectiveness = (effectiveness: { [key: string]: number }) => {
 
 export const TypeEffectiveness: React.FC<TypeEffectivenessProps> = ({ weaknesses, resistances }) => {
   const sortedWeaknesses = sortEffectiveness(weaknesses);
-  // FIX: Changed sort callback to avoid destructuring in arguments to fix type inference issues.
-  const sortedResistances = Object.entries(resistances).sort((a, b) => a[1] - b[1]);
+  // Fix: Use destructuring in sort callback to correctly infer numeric types for comparison.
+  const sortedResistances = Object.entries(resistances).sort(([, a], [, b]) => a - b);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in">
