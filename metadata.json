@@ -1,0 +1,5 @@
+{
+  "name": "Pokemon TypeDex",
+  "description": "A simple, floating overlay-style Pokedex for smartphones. Quickly look up any Pokemon's type weaknesses and resistances. Features autocomplete and damage multipliers.",
+  "requestFramePermissions": []
+}
